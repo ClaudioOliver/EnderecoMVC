@@ -74,3 +74,4 @@ D:\Projetos\EnderecoMVC\obj\Debug\net6.0\refint\EnderecoMVC.dll
 D:\Projetos\EnderecoMVC\obj\Debug\net6.0\EnderecoMVC.pdb
 D:\Projetos\EnderecoMVC\obj\Debug\net6.0\EnderecoMVC.genruntimeconfig.cache
 D:\Projetos\EnderecoMVC\obj\Debug\net6.0\ref\EnderecoMVC.dll
+D:\Projetos\EnderecoMVC\bin\Debug\net6.0\Newtonsoft.Json.dll

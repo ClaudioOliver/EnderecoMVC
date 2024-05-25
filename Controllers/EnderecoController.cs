@@ -2,11 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net.Http.Json;
+using System.Net.Http;
 using System.Threading.Tasks;
 using EnderecoMVC.Data;
 using EnderecoMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
 
 namespace EnderecoMVC.Controllers
 {
@@ -68,6 +71,20 @@ namespace EnderecoMVC.Controllers
             _context.Enderecos.Remove(address);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> SearchCep(string cep)
+        {
+            using var client = new HttpClient();
+            var response = await client.GetAsync($"https://viacep.com.br/ws/{cep}/json/");
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonString = await response.Content.ReadAsStringAsync();
+                var enderecos = JsonConvert.DeserializeObject<Enderecos>(jsonString);
+                return Json(enderecos);
+            }
+            return Json(null);
         }
     }
 }
