@@ -13,5 +13,6 @@ namespace EnderecoMVC.Data
 
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Endereco> Enderecos { get; set; }
+
     }
 }

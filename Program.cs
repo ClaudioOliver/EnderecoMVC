@@ -1,6 +1,13 @@
+using System.Configuration;
+using EnderecoMVC.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+// builder.Services.AddDbContext<ApplicationDbContext>(options =>
+//         options.UseSqlServer(Configuration.GetConnectionString("ApplicationDbContext")));
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
