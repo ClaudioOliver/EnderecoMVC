@@ -11,8 +11,8 @@ namespace EnderecoMVC.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-        public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<Endereco> Enderecos { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Enderecos> Enderecos { get; set; }
 
     }
 }

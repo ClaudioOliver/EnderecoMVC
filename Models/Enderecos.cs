@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace EnderecoMVC.Models
 {
-    public class Endereco
+    public class Enderecos
     {
         public int Id { get; set; }
         public string Cep { get; set; }
@@ -15,7 +15,7 @@ namespace EnderecoMVC.Models
         public string Cidade { get; set; }
         public string Uf { get; set; }
         public string Numero { get; set; }
-        public int UsuarioId { get; set; }
-        public Usuario User { get; set; }
+        public int UserId { get; set; }
+        public User User { get; set; }
     }
 }

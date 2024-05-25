@@ -23,7 +23,7 @@ namespace EnderecoMVC.Controllers
         [HttpPost]
         public IActionResult Login(string username, string password)
         {
-            var user = _context.Usuarios.SingleOrDefault(u => u.User == username && u.Senha == password);
+            var user = _context.Users.SingleOrDefault(u => u.Usuario == username && u.Senha == password);
             if (user != null)
             {
                 HttpContext.Session.SetString("UserId", user.Id.ToString());
@@ -37,9 +37,9 @@ namespace EnderecoMVC.Controllers
         public IActionResult Register() => View();
 
         [HttpPost]
-        public IActionResult Register(Usuario usuario)
+        public IActionResult Register(User user)
         {
-            _context.Usuarios.Add(usuario);
+            _context.Users.Add(user);
             _context.SaveChanges();
             return RedirectToAction("Login");
         }

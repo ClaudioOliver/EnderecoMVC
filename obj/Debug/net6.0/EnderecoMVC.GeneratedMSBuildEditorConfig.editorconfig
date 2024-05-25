@@ -9,63 +9,63 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EnderecoMVC
 build_property.RootNamespace = EnderecoMVC
-build_property.ProjectDir = d:\Projetos\EnderecoMVC\
+build_property.ProjectDir = D:\Projetos\EnderecoMVC\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = d:\Projetos\EnderecoMVC
+build_property.MSBuildProjectDirectory = D:\Projetos\EnderecoMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[d:/Projetos/EnderecoMVC/Views/Account/Login.cshtml]
+[D:/Projetos/EnderecoMVC/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Projetos/EnderecoMVC/Views/Account/Register.cshtml]
+[D:/Projetos/EnderecoMVC/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Projetos/EnderecoMVC/Views/Endereco/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29cQ3JlYXRlLmNzaHRtbA==
+[D:/Projetos/EnderecoMVC/Views/Enderecos/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Projetos/EnderecoMVC/Views/Endereco/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29cRGVsZXRlLmNzaHRtbA==
+[D:/Projetos/EnderecoMVC/Views/Enderecos/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Projetos/EnderecoMVC/Views/Endereco/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29cRWRpdC5jc2h0bWw=
+[D:/Projetos/EnderecoMVC/Views/Enderecos/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Projetos/EnderecoMVC/Views/Endereco/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29cSW5kZXguY3NodG1s
+[D:/Projetos/EnderecoMVC/Views/Enderecos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW5kZXJlY29zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Projetos/EnderecoMVC/Views/Home/Index.cshtml]
+[D:/Projetos/EnderecoMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Projetos/EnderecoMVC/Views/Home/Privacy.cshtml]
+[D:/Projetos/EnderecoMVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Projetos/EnderecoMVC/Views/Shared/Error.cshtml]
+[D:/Projetos/EnderecoMVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Projetos/EnderecoMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Projetos/EnderecoMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Projetos/EnderecoMVC/Views/_ViewImports.cshtml]
+[D:/Projetos/EnderecoMVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Projetos/EnderecoMVC/Views/_ViewStart.cshtml]
+[D:/Projetos/EnderecoMVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/Projetos/EnderecoMVC/Views/Shared/_Layout.cshtml]
+[D:/Projetos/EnderecoMVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-377lea328j

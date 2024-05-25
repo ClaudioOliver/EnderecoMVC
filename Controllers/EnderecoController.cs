@@ -23,7 +23,7 @@ namespace EnderecoMVC.Controllers
         public IActionResult Index()
         {
             var userId = int.Parse(HttpContext.Session.GetString("UserId"));
-            var addresses = _context.Enderecos.Where(a => a.UsuarioId == userId).ToList();
+            var addresses = _context.Enderecos.Where(a => a.UserId == userId).ToList();
             return View(addresses);
         }
 
@@ -31,10 +31,10 @@ namespace EnderecoMVC.Controllers
         public IActionResult Create() => View();
 
         [HttpPost]
-        public async Task<IActionResult> Create(Endereco address)
+        public async Task<IActionResult> Create(Enderecos enderecos)
         {
-            address.UsuarioId = int.Parse(HttpContext.Session.GetString("UserId"));
-            _context.Add(address);
+            enderecos.UserId = int.Parse(HttpContext.Session.GetString("UserId"));
+            _context.Add(enderecos);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
@@ -47,9 +47,9 @@ namespace EnderecoMVC.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Edit(Endereco address)
+        public async Task<IActionResult> Edit(Enderecos enderecos)
         {
-            _context.Update(address);
+            _context.Update(enderecos);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

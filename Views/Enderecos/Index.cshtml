@@ -1,4 +1,4 @@
-@model IEnumerable<Endereco>
+@model IEnumerable<Enderecos>
 
 @{
     ViewBag.Title = "Endereços";
@@ -25,19 +25,19 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var endereco in Model)
+        @foreach (var enderecos in Model)
         {
             <tr>
-                <td>@endereco.Cep</td>
-                <td>@endereco.Logradouro</td>
-                <td>@endereco.Complemento</td>
-                <td>@endereco.Bairro</td>
-                <td>@endereco.Cidade</td>
-                <td>@endereco.Uf</td>
-                <td>@endereco.Numero</td>
+                <td>@enderecos.Cep</td>
+                <td>@enderecos.Logradouro</td>
+                <td>@enderecos.Complemento</td>
+                <td>@enderecos.Bairro</td>
+                <td>@enderecos.Cidade</td>
+                <td>@enderecos.Uf</td>
+                <td>@enderecos.Numero</td>
                 <td>
-                    <a href="@Url.Action("Edit", new { id = endereco.Id })" class="btn btn-warning">Editar</a>
-                    <a href="@Url.Action("Delete", new { id = endereco.Id })" class="btn btn-danger">Excluir</a>
+                    <a href="@Url.Action("Edit", new { id = enderecos.Id })" class="btn btn-warning">Editar</a>
+                    <a href="@Url.Action("Delete", new { id = enderecos.Id })" class="btn btn-danger">Excluir</a>
                 </td>
             </tr>
         }
