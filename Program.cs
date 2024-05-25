@@ -1,14 +1,29 @@
-using System.Configuration;
-using EnderecoMVC.Data;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Http;
+using System;
+using EnderecoMVC.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-// builder.Services.AddDbContext<ApplicationDbContext>(options =>
-//         options.UseSqlServer(Configuration.GetConnectionString("ApplicationDbContext")));
 builder.Services.AddControllersWithViews();
+
+// Configure the database context
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Configure session services
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Define o tempo de expiração da sessão
+    options.Cookie.HttpOnly = true; // Configura o cookie da sessão como HTTP only
+    options.Cookie.IsEssential = true; // Define o cookie como essencial
+});
 
 var app = builder.Build();
 
@@ -16,7 +31,6 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -25,10 +39,13 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseSession(); // Add session middleware
+
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Account}/{action=Login}/{id?}");
 
 app.Run();
