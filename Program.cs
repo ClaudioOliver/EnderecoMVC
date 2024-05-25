@@ -16,15 +16,14 @@ builder.Services.AddControllersWithViews();
 // Configure the database context
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-builder.Services.AddControllersWithViews();
 
 // Configure session services
 builder.Services.AddSession(options =>
-{
-    options.IdleTimeout = TimeSpan.FromMinutes(30); // Define o tempo de expiração da sessão
-    options.Cookie.HttpOnly = true; // Configura o cookie da sessão como HTTP only
-    options.Cookie.IsEssential = true; // Define o cookie como essencial
-});
+ {
+     options.IdleTimeout = TimeSpan.FromMinutes(30); // Define o tempo de expiração da sessão
+     options.Cookie.HttpOnly = true; // Configura o cookie da sessão como HTTP only
+     options.Cookie.IsEssential = true; // Define o cookie como essencial
+ });
 
 var app = builder.Build();
 
