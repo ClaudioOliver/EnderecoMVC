@@ -1,0 +1,62 @@
+@model Endereco
+
+@{
+    ViewBag.Title = "Editar Endereço";
+}
+
+<h2>Editar Endereço</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label for="Cep">CEP</label>
+        <input type="text" class="form-control" asp-for="Cep" id="Cep" required />
+        <button type="button" class="btn btn-secondary" onclick="buscarCep()">Buscar CEP</button>
+    </div>
+    <div class="form-group">
+        <label for="Logradouro">Logradouro</label>
+        <input type="text" class="form-control" asp-for="Logradouro" id="Logradouro" required />
+    </div>
+    <div class="form-group">
+        <label for="Complemento">Complemento</label>
+        <input type="text" class="form-control" asp-for="Complemento" id="Complemento" />
+    </div>
+    <div class="form-group">
+        <label for="Bairro">Bairro</label>
+        <input type="text" class="form-control" asp-for="Bairro" id="Bairro" required />
+    </div>
+    <div class="form-group">
+        <label for="Cidade">Cidade</label>
+        <input type="text" class="form-control" asp-for="Cidade" id="Cidade" required />
+    </div>
+    <div class="form-group">
+        <label for="Uf">UF</label>
+        <input type="text" class="form-control" asp-for="Uf" id="Uf" required />
+    </div>
+    <div class="form-group">
+        <label for="Numero">Número</label>
+        <input type="text" class="form-control" asp-for="Numero" id="Numero" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
+
+@section Scripts {
+    <script>
+        function buscarCep() {
+            var cep = document.getElementById("Cep").value;
+            fetch(`/Endereco/SearchCep?cep=${cep}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data) {
+                        document.getElementById("Logradouro").value = data.logradouro;
+                        document.getElementById("Bairro").value = data.bairro;
+                        document.getElementById("Cidade").value = data.localidade;
+                        document.getElementById("Uf").value = data.uf;
+                    } else {
+                        alert("CEP não encontrado.");
+                    }
+                });
+        }
+    </script>
+}
