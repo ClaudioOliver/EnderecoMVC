@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EnderecoMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d55f1d8d1100a1e07586fd37b5a24a9d35dba0a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3fed2e8ed249482471889a1f97e33685fb844876")]
 [assembly: System.Reflection.AssemblyProductAttribute("EnderecoMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EnderecoMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
